@@ -1,17 +1,12 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const {getCreateCube} = require('./controllers/cubeController')
+const { getCreateCube } = require("./controllers/cubeController");
+const { getHomePage, getAboutPage } = require("./controllers/homeController");
 
+router.get("/", getHomePage);
 
-router.get('/', (req, res) => {
+router.get("/about", getAboutPage);
 
-    res.render('index');
-});
-router.get('/about', (req, res) => {
+router.get("/create", getCreateCube);
 
-    res.render('about');
-});
-
-router.get('/create', getCreateCube)
-
-module.exports = router
+module.exports = router;

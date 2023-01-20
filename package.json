@@ -1,0 +1,25 @@
+{
+  "name": "cuibcle-softuni",
+  "version": "1.0.0",
+  "description": "Softuni Project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+     
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSDoshev/cuibcle-softuni.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSDoshev/cuibcle-softuni/issues"
+  },
+  "homepage": "https://github.com/MSDoshev/cuibcle-softuni#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -34,6 +34,20 @@
       "description": "test",
       "imageUrl": "https://i5.walmartimages.com/asr/80b88d00-4112-4d49-a813-2f9815cabbeb.f9689b19e87374b4361e0940e6e646b6.jpeg",
       "difficultyLevel": "4"
+    },
+    {
+      "name": "Another Cube",
+      "description": "its a cube and its another ",
+      "imageUrl": "https://i5.walmartimages.com/asr/d66e14e2-73bd-49d7-a019-a546fdd71558.877779a8c666996d5f159d078c407823.jpeg",
+      "difficultyLevel": "4",
+      "id": 6
+    },
+    {
+      "name": "Becky",
+      "description": "it has 4 side with 4 rows",
+      "imageUrl": "https://www.grubiks.com/images/puzzles/36/small.png?v=0.0.1",
+      "difficultyLevel": "4",
+      "id": 7
     }
   ]
 }

@@ -14,6 +14,7 @@ const cubeSchema = new Schema({
         type: String,
         required:true,
         //Add http/https validation
+        match: /^https?:\/\//,
     },
     difficultyLevel:{
         type: Number,

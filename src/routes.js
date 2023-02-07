@@ -9,13 +9,12 @@ router.get("/", getHomePage);
 router.get("/about", getAboutPage);
 router.get("/404", getErrorPage);
 
-router.get("/create", getCreateCube);
-router.post("/create", postCreateCube);
+router.get("/cubes/create", getCreateCube);
+router.post("/cubes/create", postCreateCube);
 router.get("/cubes/:cubeId/details", getDetails);
-
 router.get('/cubes/:cubeId/attach', getAttachAccessory);
 router.post('/cubes/:cubeId/attach', postAttachAccessory);
 
-router.use("/accessory", accessorryController);
+router.use("/accessories", accessorryController);
 
 module.exports = router;

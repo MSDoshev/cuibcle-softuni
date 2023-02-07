@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { getCreateCube, postCreateCube, getDetails, getAttachAccessory} = require("./controllers/cubeController");
+const { getCreateCube, postCreateCube, getDetails, getAttachAccessory, postAttachAccessory} = require("./controllers/cubeController");
 const { getHomePage, getAboutPage, getErrorPage } = require("./controllers/homeController");
 const accessorryController = require('./controllers/accessoryController')
 
@@ -11,8 +11,10 @@ router.get("/404", getErrorPage);
 
 router.get("/create", getCreateCube);
 router.post("/create", postCreateCube);
-router.get("/details/:cubeId", getDetails);
+router.get("/cubes/:cubeId/details", getDetails);
+
 router.get('/cubes/:cubeId/attach', getAttachAccessory);
+router.post('/cubes/:cubeId/attach', postAttachAccessory);
 
 router.use("/accessory", accessorryController);
 

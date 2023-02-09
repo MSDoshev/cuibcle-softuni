@@ -3,11 +3,13 @@ const router = require("express").Router();
 const { getCreateCube, postCreateCube, getDetails, getAttachAccessory, postAttachAccessory} = require("./controllers/cubeController");
 const { getHomePage, getAboutPage, getErrorPage } = require("./controllers/homeController");
 const accessorryController = require('./controllers/accessoryController')
-
+const authController = require('./controllers/authController')
 //homeController
 router.get("/", getHomePage);
 router.get("/about", getAboutPage);
 router.get("/404", getErrorPage);
+
+router.use('/', authController);
 
 //cubeController
 router.get("/cubes/create", getCreateCube);

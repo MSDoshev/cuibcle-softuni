@@ -4,11 +4,12 @@ const { getCreateCube, postCreateCube, getDetails, getAttachAccessory, postAttac
 const { getHomePage, getAboutPage, getErrorPage } = require("./controllers/homeController");
 const accessorryController = require('./controllers/accessoryController')
 
+//homeController
 router.get("/", getHomePage);
-
 router.get("/about", getAboutPage);
 router.get("/404", getErrorPage);
 
+//cubeController
 router.get("/cubes/create", getCreateCube);
 router.post("/cubes/create", postCreateCube);
 router.get("/cubes/:cubeId/details", getDetails);

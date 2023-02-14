@@ -27,6 +27,10 @@ const cubeSchema = new Schema({
         ref: 'Accessory',
 
     }],
+    owner: {
+        type: Types.ObjectId,
+        ref: 'User'
+    },
 });
 
 const Cube = model("Cube", cubeSchema);

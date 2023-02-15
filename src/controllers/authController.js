@@ -13,7 +13,8 @@ router.post('/login', async (req, res) =>{
         const token = await authService.login(username, password);
         res.cookie('auth', token, {httpOnly: true});
     }catch(err){
-        console.log(err);
+        console.log(err.message);
+        return res.render('auth/login', {error: err.message});
     }
     res.redirect('/');
 })
@@ -28,6 +29,7 @@ router.post("/register", async (req, res) => {
   if (password !== repeatPassword) {
     return res.redirect('/404');
   }
+
 
   const existingUser = await authService.getUserByUsername(username);
 

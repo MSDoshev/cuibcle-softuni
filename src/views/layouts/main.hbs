@@ -26,6 +26,11 @@
         {{/if}}
       </ul>
     </header>
+    {{#if error}}
+    <div id="notifications">
+      <p id="notofocation-message">{{error}}</p>
+    {{/if}}
+    </div>
 
     {{{body}}}
     </div>

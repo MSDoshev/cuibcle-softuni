@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const config = require('../config');
 const jwt = require('../lib/jsonwebstoken');
+const AppError = require("../utils/AppError");
 
 
 exports.getUserByUsername = (username) => User.findOne({ username });
@@ -9,9 +10,14 @@ exports.register = (username, password) => User.create({ username, password });
 
 exports.login = async (username, password) => {
     const user = await this.getUserByUsername(username);
+    if(!user){
+        throw new AppError('Invalid Username!',{user})
+      
+    }
+    
     const isValid = await user.validatePassword(password)
     if(!user || !isValid){
-        throw 'Invalid Username or Password!';
+        throw new AppError('Invalid Username!')
     }
 
     const payload = {_id: user._id, username: user.username};
